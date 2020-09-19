@@ -44,6 +44,12 @@ python_version = "3.8"
 
 ![UK-COVID19-Stats](uk-covid19-stats.png)
 
+## Data provider
+
+Data is provided by the Public Health England COVID-19 API.
+
+For more information see the [API documentation](https://coronavirus.data.gov.uk/developers-guide).
+
 ## Authors -- Contributors
 
 * **dbrennand** - *Author* - [dbrennand](https://github.com/dbrennand)
