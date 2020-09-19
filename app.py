@@ -122,3 +122,6 @@ def index():
         flash("An error occurred obtaining latest COVID-19 stats from the Public Health England API.")
         return redirect(url_for("error"))
     return render_template("index.html", data=data)
+
+if __name__ == "__main__":
+    app.run()
