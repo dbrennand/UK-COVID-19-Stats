@@ -22,15 +22,17 @@ python_version = "3.8"
 
 ## Usage
 
+### Development
+
 1. Execute the following command to from the project directory to start the app locally:
 
-### PowerShell
+#### PowerShell
 
-`$Env:SECRET_KEY = $(python -c 'import os; print(os.urandom(16))'); $Env:FLASK_APP = 'app.py'; flask run`
+`$Env:SECRET_KEY = $(python -c 'import os; print(os.urandom(16))'); $Env:FLASK_APP = 'app'; flask run`
 
-### Linux
+#### Linux
 
-`export SECRET_KEY=$(python -c 'import os; print(os.urandom(16))'); export FLASK_APP=app.py; flask run`
+`export SECRET_KEY=$(python -c 'import os; print(os.urandom(16))'); export FLASK_APP=app; flask run`
 
 ## Authors -- Contributors
 
