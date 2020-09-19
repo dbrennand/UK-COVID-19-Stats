@@ -22,7 +22,12 @@ python_version = "3.8"
 
 ## Usage
 
-Execute the following command to from the project directory to start the app locally:
+1. Provide a `app.secret_key = b''` in [app.py](app.py).
+
+> [!NOTE]
+> You can generate one using the following command: `python -c 'import os; print(os.urandom(16))'`
+
+2. Execute the following command to from the project directory to start the app locally:
 
 ### PowerShell
 
