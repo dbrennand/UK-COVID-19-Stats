@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Cantarell");
+
+body {
+  font-family: "Cantarell";
+}
+
+hr {
+    color: #212529;
+    background-color: #212529;
+    height: 1px;
+  }
