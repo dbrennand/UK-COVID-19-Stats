@@ -1,4 +1,4 @@
-# UK-COVID19-Stats
+# UK-COVID-19-Stats
 
 A simple Flask app showing how the COVID-19 (SARS-CoV-2) pandemic is developing in the UK.
 
