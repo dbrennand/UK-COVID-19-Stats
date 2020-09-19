@@ -28,11 +28,17 @@ python_version = "3.8"
 
 #### PowerShell
 
-`$Env:SECRET_KEY = $(python -c 'import os; print(os.urandom(16))'); $Env:FLASK_APP = 'app'; flask run`
+`$Env:SECRET_KEY = $(python -c 'import os; print(os.urandom(16))'); $Env:FLASK_APP = 'app'; $Env:FLASK_ENV = 'development'; flask run`
 
 #### Linux
 
-`export SECRET_KEY=$(python -c 'import os; print(os.urandom(16))'); export FLASK_APP=app; flask run`
+`export SECRET_KEY=$(python -c 'import os; print(os.urandom(16))'); export FLASK_APP=app; export FLASK_ENV=development; flask run`
+
+### Docker
+
+1. Build the container image: `docker build . --tag uk-covid19-stats:0.0.1 --no-cache`
+
+2. Run the container image: `docker run -e "SECRET_KEY=$(python -c 'import os; print(os.urandom(16))')" -e "FLASK_APP='app'" -e "FLASK_HOST=0.0.0.0" --name uk-covid19-stats --rm -d -p 5000:5000 uk-covid19-stats:0.0.1`
 
 ## Authors -- Contributors
 
