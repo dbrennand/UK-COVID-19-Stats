@@ -40,6 +40,10 @@ python_version = "3.8"
 
 2. Run the container image: `docker run -e "SECRET_KEY=$(python -c 'import os; print(os.urandom(16))')" -e "FLASK_APP='app'" -e "FLASK_HOST=0.0.0.0" --name uk-covid19-stats --rm -d -p 5000:5000 uk-covid19-stats:0.0.1`
 
+## App image
+
+![UK-COVID19-Stats](uk-covid19-stats.png)
+
 ## Authors -- Contributors
 
 * **dbrennand** - *Author* - [dbrennand](https://github.com/dbrennand)
