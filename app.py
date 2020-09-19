@@ -11,6 +11,7 @@ app.secret_key = b''
 def get_latest_covid_stats():
     """
     Obtain current statistics from Public Health Englands COVID-19 API.
+    :return: A Python dictionary object containing the response from the Public Health England API.
     """
     # Declare response structure to retrieve
     structure = {
