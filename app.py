@@ -5,7 +5,6 @@ __version__ = "0.0.1"
 
 # Init Flask app
 app = Flask(__name__)
-app.secret_key = b''
 
 
 def get_latest_covid_stats():
