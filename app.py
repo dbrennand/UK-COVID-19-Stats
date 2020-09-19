@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, flash, redirect
 from uk_covid19 import Cov19API
+import os
 
 __version__ = "0.0.1"
 
@@ -123,5 +124,6 @@ def index():
         return redirect(url_for("error"))
     return render_template("index.html", data=data)
 
+
 if __name__ == "__main__":
-    app.run()
+    app.run(host=os.environ.get("FLASK_HOST", "127.0.0.1"))
