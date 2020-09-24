@@ -42,7 +42,7 @@ python_version = "3.8"
 
 2. Run the container image: `docker run -e "SECRET_KEY=$(python -c 'import os; print(os.urandom(16))')" -e "FLASK_APP='app'" -e "FLASK_HOST=0.0.0.0" --name uk-covid19-stats --rm -d -p 5000:5000 uk-covid19-stats:0.0.1`
 
-3. Head to [localhost:5000](http://localhost:8000) in your browser to view the application.
+3. Head to [localhost:5000](http://localhost:5000) in your browser to view the application.
 
 ## App images
 
