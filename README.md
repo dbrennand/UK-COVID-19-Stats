@@ -48,7 +48,7 @@ python_version = "3.8"
 
 ![UK-COVID19-Stats](uk-covid19-stats.png)
 
-![UK-COVID19-Stats-News](uk-covid19-stats.png)
+![UK-COVID19-Stats-News](uk-covid19-stats-news.png)
 
 ## Data provider
 
