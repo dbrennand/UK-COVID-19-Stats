@@ -30,10 +30,30 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-    <title>COVID-19 Stats - Error</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+
+    <title>UK COVID-19 Stats - Error</title>
 </head>
 
 <body class="bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand font-weight-bold" href="{{ url_for('index') }}">
+            <i class="d-inline-block align-top fas fa-viruses", style="color: green; width: 30; height: 30;"></i>
+            UK COVID-19 Stats
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold" href="{{ url_for('news') }}">News</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="d-flex align-items-center min-vh-100">
         <div class="container text-center">
             <h1 class="display-4">Oh dear... That wasn't meant to happen.</h1>
