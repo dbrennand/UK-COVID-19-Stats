@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Load FontAwesome -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
+
+    <!-- Load custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+
+    <title>UK COVID-19 Stats - Health News</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand font-weight-bold" href="{{ url_for('index') }}">
+            <i class="d-inline-block align-top fas fa-viruses", style="color: green; width: 30; height: 30;"></i>
+            UK COVID-19 Stats
+        </a>
+    </nav>
+    <div class="container">
+        {% for article in feed.entries %}
+        <a href="{{ article.link }}">
+            <h6 class="font-weight-bold">{{ article.title }}</h6>
+        </a>
+        <p class="text-muted"><em>{{ article.summary }}</em></p>
+        <p>{{ article.published }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+    <footer class="font-weight-bold text-center">
+        Data provided by BBC News.
+    </footer>
+</body>
+
+</html>
