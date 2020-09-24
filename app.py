@@ -132,7 +132,7 @@ def get_health_feed():
 @app.route("/error", methods=["GET"])
 def error():
     """
-    Error page.
+    Serve error page.
     """
     return render_template("error.html")
 
@@ -140,7 +140,7 @@ def error():
 @app.route("/news", methods=["GET"])
 def news():
     """
-    Health news related to COVID-19.
+    Serve health page containing news related to COVID-19.
     """
     feed = get_health_feed()
     return render_template("news.html", feed=feed)
