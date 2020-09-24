@@ -9,6 +9,8 @@ autopep8 = "*"
 [packages]
 uk-covid19 = "*"
 flask = "*"
+loguru = "*"
+feedparser = "*"
 
 [requires]
 python_version = "3.8"
